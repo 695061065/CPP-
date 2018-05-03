@@ -1,0 +1,36 @@
+//关于求平方根的一个集合
+
+float InvSqrt(float x)  
+{  
+    float xhalf = 0.5f * x;  
+    int i = *(int*)&x;   
+    i = 0x5f375a86 - (i>>1);  //右移一位 代表/2 就是牛顿迭代法,用x-f(x)/f'(x)来不断的逼近f(x)=a的根。
+    x = *(float*)&i;  
+    x = x*(1.5f-xhalf*x*x);   
+    x = x*(1.5f-xhalf*x*x);   
+    x = x*(1.5f-xhalf*x*x);  
+    return 1/x;  
+}  
+
+
+float InvSqrt(float x)  
+{  
+    float xhalf = 0.5f * x;  
+    int i = *(int*)&x;   
+    i = 0x5f375a86 - (i>>1);  //右移一位 代表/2 就是牛顿迭代法,用x-f(x)/f'(x)来不断的逼近f(x)=a的根。
+    x = *(float*)&i;  
+    x = x*(1.5f-xhalf*x*x);   
+    x = x*(1.5f-xhalf*x*x);   
+    x = x*(1.5f-xhalf*x*x);  
+    return 1/x;  
+}  float InvSqrt(float x)  
+{  
+    float xhalf = 0.5f * x;  
+    int i = *(int*)&x;   
+    i = 0x5f375a86 - (i>>1);  //右移一位 代表/2 就是牛顿迭代法,用x-f(x)/f'(x)来不断的逼近f(x)=a的根。
+    x = *(float*)&i;  
+    x = x*(1.5f-xhalf*x*x);   
+    x = x*(1.5f-xhalf*x*x);   
+    x = x*(1.5f-xhalf*x*x);  
+    return 1/x;  
+}  
